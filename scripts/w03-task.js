@@ -63,7 +63,7 @@ document.getElementById("getTotal").addEventListener("click", function(){
 
     }
     
-    document.querySelector("#total").textContent = `$${Number(totalAmount).toFixed(2)}`;
+    document.querySelector("#total").innerHTML = `$${Number(totalAmount).toFixed(2)}`;
 
 });
 
@@ -72,19 +72,22 @@ document.getElementById("getTotal").addEventListener("click", function(){
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
 let arr = [1,2,3,4,5,6,7,8,9,10,11,12,13];
-document.querySelector("#array").textContent = arr;
+document.querySelector("#array").innerHTML = arr;
 
 /* Output Odds Only Array */
-document.querySelector("#odds").textContent = arr.filter((num) => num % 2 === 1);
-
+document.querySelector("#odds").innerHTML = arr.filter(num => num % 2 === 1);
 
 /* Output Evens Only Array */
+document.querySelector("#evens").innerHTML = arr.filter(num => num % 2 === 0);
 
 /* Output Sum of Org. Array */
+document.querySelector("#sumOfArray").innerHTML = arr.reduce((sum, num) => sum + num);
 
 /* Output Multiplied by 2 Array */
+document.querySelector("#multiplied").innerHTML = arr.map(num => num * 2);
 
 /* Output Sum of Multiplied by 2 Array */
+document.querySelector("#sumOfMultiplied").innerHTML = arr.map(num => num * 2).reduce((sum, num) => sum + num);
 
 document.querySelector("#addNumbers").addEventListener("click", addNumbers);
 document.querySelector("#subtractNumbers").addEventListener("click", subtractNumbers);
