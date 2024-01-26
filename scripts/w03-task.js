@@ -49,7 +49,7 @@ function divideNumbers() {
 
 /* Decision Structure */
 document.getElementById("getTotal").addEventListener("click", function(){
-    const subtotal = document.getElementById("subtotal").value;
+    const subtotal = Number(document.getElementById("subtotal").value);
     let totalAmount = 0;
     var memberBox = document.getElementById("member");
 
@@ -63,7 +63,7 @@ document.getElementById("getTotal").addEventListener("click", function(){
 
     }
     
-    document.querySelector("#total").innerHTML = `$${Number(totalAmount).toFixed(2)}`;
+    document.querySelector("#total").innerHTML = `$${totalAmount.toFixed(2)}`;
 
 });
 
