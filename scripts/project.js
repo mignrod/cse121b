@@ -6,7 +6,7 @@ let phoneList = [];
 
 /* async getPhones Function using fetch()*/
 const getPhones = async () => {
-    const response = await fetch('https://run.mocky.io/v3/e34d2dc5-eab2-4145-9940-dfe1dfdda41a');
+    const response = await fetch('https://run.mocky.io/v3/07de3ca3-a969-4434-9be6-a644fe07120c');
     if (response.ok) {
         phoneList = await response.json();
         displayedPhones(phoneList);
