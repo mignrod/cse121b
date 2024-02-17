@@ -282,14 +282,17 @@ footer {
 #phones {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: .5rem;
+    grid-gap: 1.5rem;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: 8rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 3rem;
 }
 
 #phones article {
-    height: 250px;
-    margin: .5rem;
+    height: auto;
+    margin: auto;
     border: 1px solid rgba(0, 0, 0, .1);
     padding: 1rem;
     background-color: #eee;
@@ -304,12 +307,29 @@ footer {
     font-size: smaller;
 }
 
+#phones h3 {
+    color: black;
+    font-size: 1rem;
+}
 
 #phones img {
     width: 250px;
-    height: auto;
+    height: 250px;
     box-shadow: 0 0 30px #777;
     margin: .5rem;
+}
+
+#filtered-brand {
+    position: fixed;
+}
+
+#phones button {
+    background-color: rgb(71, 68, 68);
+    padding: 3px;
+    font-size: 1rem;
+    border-color: #eee;
+    margin-top: 4px;
+    color: #eee;
 }
 
 /* Media Queries */
