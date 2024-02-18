@@ -371,7 +371,7 @@ footer {
 }
 
 
-.popup .btn-cerrar-popup {
+.popup .btn-close-popup {
 	font-size: 16px;
 	line-height: 16px;
 	display: block;
@@ -380,7 +380,7 @@ footer {
 	color: #BBBBBB;
 }
 
-.popup .btn-cerrar-popup:hover {
+.popup .btn-close-popup:hover {
 	color: #000;
 }
 

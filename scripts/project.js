@@ -50,6 +50,10 @@ const displayedPhones = (phones) => {
             imgSpecs.src = (phone.imageurl);
             imgSpecs.alt = (`Image ${phone.brand} ${phone.model}`);
 
+            let closeButton = document.createElement('a');
+            closeButton.innerHTML = `<a href="#" id="btn-close-popup" class="btn-close-popup"><i class="fas fa-times"></i></a>`;
+            articleSpecs.appendChild(closeButton);
+
             articleSpecs.appendChild(h3Specs);
             articleSpecs.appendChild(imgSpecs);
 
@@ -82,14 +86,18 @@ const displayedPhones = (phones) => {
             overlay.classList.add('active');
             popup.classList.add('active');
             details.classList.add('active');
-            // let	closePopup = document.getElementById('btn-cerrar-popup');
+
+            
+            let	closePopup = document.getElementById('btn-close-popup');
             
             
-            // closePopup.addEventListener('click', function(e){
-            //     e.preventDefault();
-            //     overlay.classList.remove('active');
-            //     popup.classList.remove('active');
-            // });
+            closePopup.addEventListener('click', function(e){
+                articleSpecs.innerHTML = '';
+
+                e.preventDefault();
+                overlay.classList.remove('active');
+                popup.classList.remove('active');
+            });
         });
 
 });
@@ -149,31 +157,6 @@ const sortedPhones = (phones) => {
     displayedPhones(sortedList);
 
 }
-
-/* Function to show specs of the selected phone */
-// const showSpecs = (phones) => {
-//     let openPopup = phones.document.getElementById(phone.model);
-
-//     let	overlay = document.getElementById('overlay');
-
-//     let	popup = document.getElementById('popup');
-
-//     let	closePopup = document.getElementById('btn-cerrar-popup');
-
-// openPopup.addEventListener('click', () => {
-// 	overlay.classList.add('active');
-// 	popup.classList.add('active');
-// });
-
-// closePopup.addEventListener('click', function(e){
-// 	e.preventDefault();
-// 	overlay.classList.remove('active');
-// 	popup.classList.remove('active');
-// });
-// }
-
-
-
 
 /* Add the event listeners */ 
 document.querySelector('#filtered-brand').addEventListener('change', () => {
