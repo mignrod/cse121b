@@ -54,12 +54,12 @@ const displayedPhones = (phones) => {
             articleSpecs.appendChild(h3Specs);
             articleSpecs.appendChild(imgSpecs);
 
-            phone.specs.forEach(specification => {
-                let art = document.createElement('li');
-                art.textContent = specification;
-                document.getElementsByName("articleSpecs").appendChild(art);
+            // phone.specs.forEach(specification => {
+            //     let art = document.createElement('li');
+            //     art.textContent = specification;
+            //     document.querySelector("#specs").appendChild(art);
 
-            })
+            // })
 
             // articleSpecs.appendChild(art);
 
