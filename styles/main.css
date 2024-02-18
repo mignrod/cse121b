@@ -367,6 +367,7 @@ footer {
 	transform: scale(0.7);
 	opacity: 0;
     align-self: auto;
+    
 }
 
 
@@ -390,10 +391,11 @@ footer {
 	opacity: 0;
 }
 
-.popup h4 {
-	font-size: 26px;
-	font-weight: 300;
+.popup h5 {
+	font-size: 20px;
 	margin-bottom: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
 	opacity: 0;
 }
 
@@ -425,7 +427,7 @@ footer {
 /* ------------------------- */
 .popup.active {	transform: scale(1); opacity: 1; }
 .popup.active h3 { animation: titleEntry .8s ease .5s forwards; }
-.popup.active h4 { animation: subtitleEntry .8s ease .5s forwards; }
+.popup.active h5 { animation: subtitleEntry .8s ease .5s forwards; }
 .popup.active .contenedor-inputs { animation: inputsEntry 1s linear 1s forwards; }
 
 @keyframes titleEntry {

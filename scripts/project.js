@@ -50,20 +50,26 @@ const displayedPhones = (phones) => {
             imgSpecs.src = (phone.imageurl);
             imgSpecs.alt = (`Image ${phone.brand} ${phone.model}`);
 
-
             articleSpecs.appendChild(h3Specs);
             articleSpecs.appendChild(imgSpecs);
 
-            // phone.specs.forEach(specification => {
-            //     let art = document.createElement('li');
-            //     art.textContent = specification;
-            //     document.querySelector("#specs").appendChild(art);
+            phone.specs.forEach(specification => {
+                let art = document.createElement('h5');
+                art.textContent =
+                `| Ram: ${specification.ram} |
+                | Storage: ${specification.memory} |
+                | OS: ${specification.os} |
+                | Cameras: ${specification.backCamera} (Main)
+                ${specification.frontCamera} (Selfie) |
+                | Processor: ${specification.processor} |
+                | CPU: ${specification.cpu} |
+                | Battery: ${specification.battery} |
+                | Upgradeable: ${specification.upgradable} |
+                `
 
-            // })
+                articleSpecs.appendChild(art);
 
-            // articleSpecs.appendChild(art);
-
-
+            });
 
             phonesSpecs.appendChild(articleSpecs);
 
@@ -85,8 +91,6 @@ const displayedPhones = (phones) => {
             //     popup.classList.remove('active');
             // });
         });
-
-
 
 });
 
